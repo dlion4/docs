@@ -69,7 +69,7 @@
         "api-reference/authentication/endpoint/obtain-token",
         "api-reference/authentication/endpoint/refresh-token"
       ]
-    }
+    },
     {
       "group": "Endpoint Examples",
       "pages": [
