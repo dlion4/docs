@@ -133,7 +133,7 @@
       }
     },
 
-  "/api/users/":{
+  "/api/users/": {
     "post": {
       "description":"create a new account user",
       "requestBody": {
@@ -142,18 +142,7 @@
           "application/json": {
             "schema": {
               "$ref": "#/components/schemas/CreateUser"
-            },
-          "application/x-www-form-urlencoded": {
-            "schema": {
-              "$ref": "#/components/schemas/CreateUser"
-            },
-          "multipart/form-data": {
-            "schema": {
-              "$ref": "#/components/schemas/CreateUser"
             }
-          }
-          }
-
           }
         }
       },
@@ -179,7 +168,6 @@
           }
         }
       }
-  
     }
   },
   "components": {
@@ -215,6 +203,46 @@
                 "description": "Identification number of the plant",
                 "type": "integer",
                 "format": "int64"
+              }
+            }
+          }
+        ]
+      },
+      "User": {
+        "required": [
+          "id",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "The UUID identifier of the user",
+            "type": "string",
+            "format": "uuid"
+          },
+          "email": {
+            "description": "The email address of the user",
+            "type": "string",
+            "format": "email"
+          },
+          "username": {
+            "description": "The username of the user, defaults to part of the email",
+            "type": "string"
+          }
+        }
+      },
+      "NewUser": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/User"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "password": {
+                "description": "Password for the user",
+                "type": "string",
+                "format": "password"
               }
             }
           }
