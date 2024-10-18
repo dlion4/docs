@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Zerobounce",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -32,7 +32,7 @@
     },
     {
       "name": "Authentication",
-      "url": "api-reference/authentication"
+      "url": "api-reference"
     }
   ],
  
