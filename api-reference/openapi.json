@@ -11,6 +11,9 @@
   "servers": [
     {
       "url": "http://sandbox.mintlify.com"
+    },
+    {
+      "url": "http://127.0.0.1:9003"
     }
   ],
   "security": [
@@ -128,6 +131,55 @@
           }
         }
       }
+    },
+
+  "/api/users/":{
+    "post": {
+      "description":"create a new account user",
+      "requestBody": {
+        "description": "Creates a new plant in the store",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/CreateUser"
+            },
+          "application/x-www-form-urlencoded": {
+            "schema": {
+              "$ref": "#/components/schemas/CreateUser"
+            },
+          "multipart/form-data": {
+            "schema": {
+              "$ref": "#/components/schemas/CreateUser"
+            }
+          }
+          }
+
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Created user successully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUser"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "User has already been created",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Error"
+              }
+            }
+          }
+        }
+      }
+  
     }
   },
   "components": {
@@ -192,4 +244,5 @@
       }
     }
   }
+}
 }
