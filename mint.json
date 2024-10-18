@@ -32,7 +32,7 @@
     },
     {
       "name": "Authentication",
-      "url": "https://auth.zerobounce.com"
+      "url": "api-reference/authentication/introduction"
     }
   ],
  
