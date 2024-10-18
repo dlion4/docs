@@ -11,9 +11,6 @@
   "servers": [
     {
       "url": "http://sandbox.mintlify.com"
-    },
-    {
-      "url": "http://127.0.0.1:9003"
     }
   ],
   "security": [
