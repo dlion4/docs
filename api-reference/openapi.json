@@ -133,7 +133,7 @@
       }
     },
 
-  "/api/users/": {
+  "/api/users": {
     "post": {
       "description":"create a new account user",
       "requestBody": {
