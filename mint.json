@@ -23,12 +23,16 @@
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": ""
+    "url": "https://earnkraft.com"
   },
   "tabs": [
     {
       "name": "API Reference",
       "url": "api-reference"
+    },
+    {
+      "name": "Authentication",
+      "url": "https://auth.zerobounce.com"
     }
   ],
  
@@ -70,13 +74,12 @@
 
  "anchors": [
     {
-      "group": "Support",
-      "pages": [
-         "Documentation",
-         "Community",
-         "News"
-      ]
-  
+      "name": "Introduction", 
+      "url": "/docs/introduction"
+    },
+    {
+      "name": "Getting Started",
+      "url": "/docs/getting-started"
     }
   ],
 
